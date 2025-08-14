@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yatharth Nigam</title>
+
+  <!-- Google Fonts & Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- TailwindCSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          colors: {
+            brand: {
+              50: "#f5f3ff",
+              100: "#ede9fe",
+              200: "#ddd6fe",
+              300: "#c4b5fd",
+              400: "#a78bfa",
+              500: "#8b5cf6",
+              600: "#7c3aed",
+              700: "#6d28d9",
+              800: "#5b21b6",
+              900: "#4c1d95",
+            },
+          },
+          boxShadow: {
+            soft: "0 10px 30px -12px rgba(0,0,0,0.25)",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Subtle gradient background */
+    .bg-grid {
+      background-image: radial-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-slate-800">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="flex items-center gap-2 font-semibold text-brand-700">
+        <span class="material-icons">hub</span>
+        <span>Yatharth Nigam</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <li><a class="hover:text-brand-700" href="#about">About</a></li>
+        <li><a class="hover:text-brand-700" href="#skills">Skills</a></li>
+        <li><a class="hover:text-brand-700" href="#experience">Experience</a></li>
+        <li><a class="hover:text-brand-700" href="#projects">Projects</a></li>
+        <li><a class="hover:text-brand-700" href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact"
+        class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 transition">
+        <span class="material-icons text-sm">send</span>
+        Hire Me
+      </a>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+        <span class="material-icons">menu</span>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <ul class="max-w-6xl mx-auto p-4 space-y-3 text-sm">
+        <li><a class="block hover:text-brand-700" href="#about">About</a></li>
+        <li><a class="block hover:text-brand-700" href="#skills">Skills</a></li>
+        <li><a class="block hover:text-brand-700" href="#experience">Experience</a></li>
+        <li><a class="block hover:text-brand-700" href="#projects">Projects</a></li>
+        <li><a class="block hover:text-brand-700" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 relative">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-semibold mb-4">
+            <span class="material-icons text-sm">bolt</span> Angular • .NET 8 • SQL
+          </div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Software Engineer focused on scalable <span class="text-brand-700">Angular</span> frontends &
+            high‑performance <span class="text-brand-700">.NET APIs</span>
+          </h1>
+          <p class="mt-4 text-slate-600 leading-relaxed">
+            2 years building enterprise apps end‑to‑end: responsive UIs, secure APIs, optimized SQL, and automated
+            CI/CD. Recently migrated core services to <strong>.NET 8</strong> and improved calibration workflows by
+            <strong>40%</strong>.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects"
+              class="px-5 py-3 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 transition">See
+              Projects</a>
+            <a href="#contact"
+              class="px-5 py-3 rounded-2xl border border-slate-300 hover:border-brand-600 hover:text-brand-700 transition">Get
+              in Touch</a>
+            <a href="https://drive.google.com/file/d/18RmfwRGczoMcLuftjbeXI7ZWQLUgbwJN/view?usp=sharing"
+              class="px-5 py-3 rounded-2xl border border-slate-300 hover:border-brand-600 hover:text-brand-700 transition"
+              download>Download Resume (PDF)</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl bg-white shadow-soft border border-slate-200 p-6">
+            <div class="grid grid-cols-3 gap-4">
+              <div class="col-span-3 flex items-center justify-between">
+                <span class="text-sm font-semibold text-slate-500">Tech Snapshot</span>
+                <span class="material-icons text-slate-400">dashboard</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Frontend</div>
+                <div class="font-semibold">Angular • RxJS</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Backend</div>
+                <div class="font-semibold">.NET 8 • Web API</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Database</div>
+                <div class="font-semibold">SQL Server • SPs</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Cloud & DevOps</div>
+                <div class="font-semibold">AWS S3 • GitLab CI/CD</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Security</div>
+                <div class="font-semibold">JWT • RBAC</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-brand-50">
+                <div class="text-xs text-slate-500">Quality</div>
+                <div class="font-semibold">Coverity • Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+    <p class="mt-4 text-slate-600 max-w-3xl">
+      I build performant web apps with a product mindset. My sweet spot is shipping features end‑to‑end: Angular
+      components, .NET 8 APIs, and SQL Server stored procedures — all deployed via GitLab pipelines and backed by AWS
+      S3. I enjoy simplifying complex workflows and making UIs feel effortless.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold">Skills</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Languages</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100">C#</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">TypeScript</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">SQL</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">HTML</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">CSS</span>
+          </div>
+        </div>
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Frameworks & Libraries</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100">Angular</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">ASP.NET Core</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">.NET 8</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">RxJS</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Bootstrap/Material</span>
+          </div>
+        </div>
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Databases & Tools</h3>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="px-3 py-1 rounded-full bg-slate-100">SQL Server</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Stored Procedures</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Entity Framework Core</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Git</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">GitLab CI/CD</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Postman</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Coverity</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">Docker (basic)</span>
+            <span class="px-3 py-1 rounded-full bg-slate-100">AWS S3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Experience</h2>
+    <div class="mt-6 grid gap-6">
+      <article class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+        <header class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <div>
+            <h3 class="text-xl font-semibold">Software Engineer</h3>
+            <p class="text-sm text-slate-500">Boeing • 08/2023 – Present</p>
+          </div>
+          <div class="text-sm text-slate-500">Angular • .NET 8 • SQL Server • AWS S3 • GitLab</div>
+        </header>
+        <ul class="mt-4 space-y-3 list-disc list-inside text-slate-700">
+          <li><strong>Developed & enhanced enterprise apps</strong> (ROAMS, CCS) with Angular, .NET 8, SQL Server, and
+            S3, improving operational efficiency and scalability.</li>
+          <li><strong>Migrated core APIs</strong> from .NET 3.1 to <strong>.NET 8</strong>, boosting performance,
+            maintainability, and security.</li>
+          <li><strong>Implemented secure auth & RBAC</strong> across modules, protecting sensitive calibration and lab
+            data.</li>
+          <li><strong>Optimized database access</strong> via stored procedures and query tuning, reducing latency and
+            errors.</li>
+          <li><strong>Shipped responsive UIs</strong> for tablets and large lab displays to support real-world lab
+            workflows.</li>
+          <li><strong>Automated CI/CD</strong> with GitLab pipelines, Coverity scans, and environment-specific
+            deployments.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold">Selected Projects</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <!-- RGT / ROAMS -->
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Reliability Grouping Tool (ROAMS)</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700">Angular • .NET 8 • SQL</span>
+          </div>
+          <p class="mt-2 text-slate-600">Improved asset calibration efficiency by <strong>40%</strong> with optimized
+            grouping logic; integrated <strong>ML‑driven
+              grouping</strong> with Data Science to reduce groups from <strong>100K → 14K</strong> while maintaining
+            accuracy.</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Migrated APIs to .NET 8; added JWT auth & RBAC for SMEs and approvers.</li>
+            <li>Built review UI for subject matter experts to approve groupings faster.</li>
+          </ul>
+        </div>
+        <!-- CCS -->
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Common Calibration Suite (CCS)</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700">Angular • .NET • SQL • S3</span>
+          </div>
+          <p class="mt-2 text-slate-600">End‑to‑end platform for creating calibration configurations; all DB access
+            through stored procedures, media stored on S3 for scalability.</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Authentication & role‑based authorization; robust error handling & logging.</li>
+            <li>Responsive UI supports tablets and large lab screens; GitLab CI/CD with Coverity.</li>
+          </ul>
+        </div>
+        <!-- SRF -->
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Service Request Form (SRF)</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700">Angular • .NET • SQL</span>
+          </div>
+          <p class="mt-2 text-slate-600">Digitized manual approvals; reduced request processing time from <strong>2 days
+              → 15 minutes</strong> (~95% improvement).</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>Admin dashboard for live tracking & approvals; reduced human error.</li>
+            <li>Accessible, intuitive forms with validation and clear status updates.</li>
+          </ul>
+        </div>
+        <!-- Driver Repository -->
+        <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-soft">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-semibold">Instrument Driver Repository</h3>
+            <span class="text-xs px-2 py-1 rounded-full bg-brand-100 text-brand-700">Angular • .NET • SQL • S3</span>
+          </div>
+          <p class="mt-2 text-slate-600">Centralized store for instrument drivers with S3; eliminated duplication and
+            improved cross‑team access.</p>
+          <ul class="mt-3 text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>RBAC for admins/approvers/users; automated approval workflows.</li>
+            <li>Standardized usage reduced redundant efforts by <strong>~60%</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+    <p class="mt-2 text-slate-600">Have an opportunity or question? I’d love to connect.</p>
+    <form id="contactForm" class="mt-6 grid md:grid-cols-2 gap-4">
+      <div>
+        <label for="name" class="text-sm text-slate-600">Your Name</label>
+        <input id="name" name="name" type="text"
+          class="w-full mt-1 rounded-2xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          required />
+      </div>
+      <div>
+        <label for="email" class="text-sm text-slate-600">Your Email</label>
+        <input id="email" name="email" type="email"
+          class="w-full mt-1 rounded-2xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          required />
+      </div>
+      <div class="md:col-span-2">
+        <label for="message" class="text-sm text-slate-600">Message</label>
+        <textarea id="message" name="message" rows="4"
+          class="w-full mt-1 rounded-2xl border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          required></textarea>
+      </div>
+      <div class="md:col-span-2 flex items-center gap-3">
+        <button type="submit"
+          class="px-5 py-3 rounded-2xl bg-brand-600 text-white shadow-soft hover:bg-brand-700 transition">
+          Send Message
+        </button>
+        <a href="mailto:yatharthnigam@gmail.com" class="text-sm text-slate-500 hover:text-brand-700">Or email me
+          directly</a>
+      </div>
+      <div id="formStatus" class="md:col-span-2 mt-2 text-sm"></div>
+    </form>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const status = document.getElementById('formStatus');
+
+        // Basic validation
+        if (!name || !email || !message) {
+          status.textContent = "Please fill out all fields.";
+          status.className = "text-red-600";
+          return;
+        }
+        // Simple email format check
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          status.textContent = "Please enter a valid email address.";
+          status.className = "text-red-600";
+          return;
+        }
+
+        // Simulate sending (no backend)
+        status.textContent = "Thank you! Your message has been received.";
+        status.className = "text-green-600";
+        this.reset();
+      });
+    </script>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200">
+    <div
+      class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Yatharth Nigam. Built with HTML • Tailwind • a lot of ☕</p>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-brand-700" href="#" aria-label="GitHub"><span class="material-icons">code</span></a>
+        <a class="hover:text-brand-700" href="#" aria-label="LinkedIn"><span
+            class="material-icons">business_center</span></a>
+        <a class="hover:text-brand-700" href="#" aria-label="Email"><span class="material-icons">mail</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tiny JS for mobile menu + year -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
